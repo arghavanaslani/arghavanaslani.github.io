@@ -1,5 +1,5 @@
 <html lang="en"><head>
-    <title>W3.CSS Template</title>
+    <title>Data Collection with Pupil Invisible</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -39,10 +39,13 @@
         <i class="fa fa-remove"></i>
       </a>
       <h4 class="w3-bar-item"><b>Menu</b></h4>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#start-equipment">1. Start Equipment</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#check-your-device">2. Check Your Device</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#meet-your-participant">3. Meet Your Participant</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#calibration">4. Calibration</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#record-and-save">5. Record and Save</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#upload">6. Upload</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#troubleshoot">7. Troubleshoot</a>
     </nav>
     
     <!-- Overlay effect when opening sidebar on small screens -->
@@ -53,31 +56,152 @@
     
       <div class="w3-row w3-padding-64">
         <div class="w3-twothird w3-container">
-          <h1 class="w3-text-teal">Heading</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="w3-third w3-container">
-          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+          <h1 class="w3-text-teal"></h1>
+          <h4>Hello, and thank you for your assistance in collecting this data!</h4>
+          <h4>In this document, we will provide a step-by-step guide on how to create a recording using the pupil invisible device and subsequently upload it to the cloud.</h4>
         </div>
       </div>
     
-      <div class="w3-row">
+      <div class="w3-row w3-padding-64"  id="start-equipment">
         <div class="w3-twothird w3-container">
-          <h1 class="w3-text-teal">Heading</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h1 class="w3-text-teal">1. Start Equipment</h1>
+          <p>Please ensure you have received the following items for this data collection:</p>
+            <p style="margin-left: 25px;">1. A mobile phone</p>
+            <p style="margin-left: 25px;">2. One pair of glasses</p>
+            <p style="margin-left: 25px;">3. A USB-C cable</p>
         </div>
         <div class="w3-third w3-container">
-          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+          <img src="./screenshots/Pupil_Invisible-with-companion.jpg" width="300"  class="w3-border w3-padding-large w3-padding-32 w3-center">
         </div>
       </div>
     
-      <div class="w3-row w3-padding-64">
+      <div class="w3-row w3-padding-64" id="check-your-device">
         <div class="w3-twothird w3-container">
-          <h1 class="w3-text-teal">Heading</h1>
+          <h1 class="w3-text-teal">2. Check Your Device</h1>
+          <p style="margin-left: 25px;">Start by turning on the phone and swiping to unlock. If prompted for a password, enter '1234'.</p>
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">Check the phone's battery level. If it's below the minimum required percentage (30%), please take it to the charging station.</p>
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">Open the 'Invisible Companion App' on the phone. You can identify the app by its icon, which looks like this:</p>
+          <img style="margin-left: 25px;" src="./screenshots/applogo.png" width="100"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">Check the remaining storage by tapping the '(i)' icon on the top right within the 'Invisible Companion' app. If the available storage is less than minimum free space(20 GB), please proceed to the storage station.</p>
+        </div>
+
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/remaining-storage.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">Ensure you are logged into the correct workspace. Refer to the screenshot below to confirm the name of the workspace.</p>
+        </div>
+
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/workspace-check.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">Open settings from the left bottom corner and adjust exposure value according to room lighting.</p>
+        </div>
+
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/exposure.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">You can open the preview window from the bottom right corner to check if the exposure value matches the room lighting.</p>
+        </div>
+
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/preview-button.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">From settings, toggle Cloud Upload on so recordings are uploaded automatically to the cloud after being saved. </p>
+        </div>
+
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/cloudON.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 25px;">Connect the glasses to the phone using the USB-C cable. On the app's home screen, check that the scene and eye camera icons are colored, indicating successful connection (they would appear gray if not connected).</p>
+        </div>
+
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/cable-connected.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+      </div>
+    
+      <div class="w3-row w3-padding-64" id="meet-your-participant">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">3. Meet Your Participant</h1>
+          <p style="margin-left: 25px;">Create a new wearer profile and name it as 'D[device number]-P[participant number].' For instance, if you're using device number 1 and collecting data from the third participant, your participant name should be 'D01-P003'.</p>
+        </div>
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/wearer-name.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+      <div class="w3-row w3-padding-64" id="calibration">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">4. Calibration</h1>
+          <p style="margin-left: 25px;">To view a live stream of the scene video with a gaze overlay, click the 'Preview' button. In this tab, you will need to calibrate the gaze overlay for each participant. To do this, follow these steps:</p>
+          <p style="margin-left: 50px;">a. Ask the participant to focus on a specific point on the calibration board.</p>
+          <p style="margin-left: 50px;">b. Place your finger on the screen and adjust its position so that the red circle aligns with where the participant is looking.</p>
+          <p style="margin-left: 50px;">c. Once aligned, apply the changes.</p>
+        </div>
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/preview-button.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+      </div>
+
+      <div class="w3-row w3-padding-64" id="record-and-save">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">5. Record and Save</h1>
+          <p style="margin-left: 25px;">You can now begin recording:</p>
+          <p style="margin-left: 50px;">Press the large red button to start the recording.</p>
+          <p style="margin-left: 50px;">Lock the screen and give the phone to the participant to hold in their hand or place it in their pocket.</p>
+        </div>
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/start-button.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 50px;">After the participant has completed their visit from the museum, unlock the phone. Press the red square to stop the recording.</p>
+        </div>
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/recording-inprogress-stop-button.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+        <div class="w3-twothird w3-container">
+          <p style="margin-left: 50px;">Select 'Save' to save the recording.</p>
+        </div>
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/save-recording.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+
+      </div>
+
+      <div class="w3-row w3-padding-64" id="upload">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">6. Upload</h1>
+          <p style="margin-left: 25px;">You can monitor the upload progress of the recording in the 'Recordings' section located in the bottom left corner of the app's home page.</p>
+        </div>
+        <div class="w3-third w3-container">
+          <img style="margin-left: 25px;" src="./screenshots/recording-uploading.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+          <img style="margin-left: 25px;" src="./screenshots/upload-done.jpg" width="250"  class="w3-border w3-padding-large w3-padding-32 w3-center">
+        </div>
+      </div>
+
+      <div class="w3-row w3-padding-64" id="troubleshoot">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">7. Troubleshoot</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
             dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
@@ -86,9 +210,9 @@
           <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
         </div>
       </div>
-    
+
       <!-- Pagination -->
-      <div class="w3-center w3-padding-32">
+      <!-- <div class="w3-center w3-padding-32">
         <div class="w3-bar">
           <a class="w3-button w3-black" href="#">1</a>
           <a class="w3-button w3-hover-black" href="#">2</a>
@@ -97,9 +221,9 @@
           <a class="w3-button w3-hover-black" href="#">5</a>
           <a class="w3-button w3-hover-black" href="#">»</a>
         </div>
-      </div>
+      </div> -->
     
-      <footer id="myFooter">
+      <!-- <footer id="myFooter">
         <div class="w3-container w3-theme-l2 w3-padding-32">
           <h4>Footer</h4>
         </div>
@@ -107,7 +231,7 @@
         <div class="w3-container w3-theme-l1">
           <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
         </div>
-      </footer>
+      </footer> -->
     
     <!-- END MAIN -->
     </div>
