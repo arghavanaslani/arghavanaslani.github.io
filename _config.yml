@@ -23,9 +23,9 @@ repository               : "arghavanaslani/arghavanaslani.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Hi, I'm Arghavan!"
+  name             : "Arghavan Aslani"
   pronouns         : "she/her"  
-  bio              : "Master's Student in Cognitive Science"
+  # bio              : ""
   location         : "Paris"
   employer         : "Sorbonne Université & Université Paris Cité"
   uri              : # URL
