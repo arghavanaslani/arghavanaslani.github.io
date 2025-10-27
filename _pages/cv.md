@@ -1,5 +1,5 @@
 ---
-layout: cv
+layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -9,3 +9,26 @@ redirect_from:
 
 {% include base_path %}
 
+Education
+======
+
+* M1 in Cognitive Science (Computational Neuroscience & AI track), Sorbonne Université and Université Paris Cité, Paris, France, 2025
+* B.S. in Electrical Engineering (Control), University of Tehran, Tehran, Iran 2022
+
+Research experience
+======
+* Sep 2025 - Now: Research Assistant
+  * The computational brain team, Neuromodulation Institute, Paris
+  * Supervisor: Joao Barbosa
+
+* Oct 2024 - Jun 2025: Research Assistant
+  * Perceptual Systems Lab, Ecole Normale Supérieure
+  * Supervisor: Christian Lorenzi
+
+* Apr 2022 - Oct 2024: Research Assistant
+  * Crowd Cognition Lab, Ludwig Maximilians Universität
+  * Supervisor: Ophelia Deroy & Bahador Bahrami
+
+
+[Full CV (PDF)](https://arghavanaslani.github.io/files/cv_ArghavanAslani.pdf)
+  
