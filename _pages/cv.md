@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 ## Download full CV
-[Full CV (PDF)](/files/cv_ArghavanAslani.pdf)
+[Full CV (PDF)](https://arghavanaslani.github.io/files/cv_ArghavanAslani.pdf)
 
 ---
 
