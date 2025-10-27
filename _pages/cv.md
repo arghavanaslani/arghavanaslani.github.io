@@ -1,14 +1,14 @@
 ---
-layout: page
+layout: cv
 title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
-
+<!-- 
 ## Download full CV
-[Full CV (PDF)](https://arghavanaslani.github.io/files/cv_ArghavanAslani.pdf)
+[Full CV (PDF)](/files/cv_ArghavanAslani.pdf)
 
 ---
 
@@ -27,4 +27,4 @@ redirect_from:
 
 - **Apr 2022 – Oct 2024:** Research Assistant  
   _Crowd Cognition Lab, Ludwig-Maximilians-Universität_  
-  Supervisors: Ophelia Deroy & Bahador Bahrami
+  Supervisors: Ophelia Deroy & Bahador Bahrami -->
