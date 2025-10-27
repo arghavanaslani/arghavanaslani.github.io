@@ -7,5 +7,5 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+[Full CV (PDF)](files/cv_ArghavanAslani.pdf)
 
