@@ -6,33 +6,33 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-<!-- 
+
 {% include base_path %}
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<!-- * Ph.D in Version Control Theory, GitHub University, 2018 (expected) -->
+* M1 in Cognitive Science (Computational Neuroscience & AI track), Sorbonne Université and Université Paris Cité, Paris, France, 2025
+* B.S. in Electrical Engineering (Control), University of Tehran, Tehran, Iran 2022
 
-Work experience
+Research experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Sep 2025 - Now: Research Assistant
+  * The computational brain team, INM, Paris
+  * Supervisor: Joao Barbosa
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Oct 2024 - Jun 2025: Research Assistant
+  * Perceptual Systems Lab, Ecole Normale Supérieure
+  * Supervisor: Christian Lorenzi
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Apr 2022 - Oct 2024: Research Assistant
+  * Crowd Cognition Lab, Ludwig Maximilians Universität
+  * Supervisor: Ophelia Deroy & Bahador Bahrami
+
+
+[Full CV (PDF)](files/cv_ArghavanAslani.pdf)
   
-Skills
+<!-- Skills
 ======
 * Skill 1
 * Skill 2
