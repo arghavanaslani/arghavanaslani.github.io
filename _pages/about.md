@@ -7,4 +7,4 @@ redirect_from:
   - /about.html
 ---
 
-I’m a first-year master's student in computational cognitive science, currently exploring the fascinating world of auditory perception at the Perceptual Systems laboratory at ENS in Paris.
+I’m a master's student in computational neuroscience. I'm currently workign on the disributed mechanisms of working memory at Neuromodulation Institute in Paris. 
