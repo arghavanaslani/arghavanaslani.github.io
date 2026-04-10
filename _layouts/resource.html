@@ -5,6 +5,11 @@ layout: single
 {% assign col = page.collection %}
 
 <div class="resource-header">
+  {% if page.status %}
+    <span class="resource-header__field">
+      <span class="resource-status resource-status--{{ page.status }}">{{ page.status }}</span>
+    </span>
+  {% endif %}
   {% if page.authors %}
     <span class="resource-header__field"><strong>Authors</strong> {{ page.authors }}</span>
   {% endif %}
