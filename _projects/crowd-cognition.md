@@ -1,6 +1,6 @@
 ---
-title: "Collective Decision-Making"
-excerpt: "How groups of people aggregate noisy information and reach better-than-individual decisions."
+title: "Project 2"
+excerpt: "A short description of what this project is about."
 collection: projects
 featured: true
 date: 2023-04-01
@@ -10,11 +10,11 @@ header:
 
 ## Overview
 
-Research at the Crowd Cognition Lab, LMU Munich, with Ophelia Deroy & Bahador Bahrami.
+Description of project 2.
 
 ## Methods
 
-Behavioral experiments, Bayesian modeling, signal detection theory.
+Methods used.
 
 ## Results
 

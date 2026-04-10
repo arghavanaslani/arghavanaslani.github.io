@@ -1,6 +1,6 @@
 ---
-title: "Attractor Network Models"
-excerpt: "Exploring the dynamics of low-dimensional attractor networks as models of short-term memory."
+title: "Project 6"
+excerpt: "A short description of what this project is about."
 collection: projects
 featured: false
 date: 2024-03-01
@@ -10,4 +10,4 @@ header:
 
 ## Overview
 
-Theoretical neuroscience project on the geometry of memory representations.
+Description of project 6.

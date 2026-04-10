@@ -1,6 +1,6 @@
 ---
-title: "Working Memory & Neural Dynamics"
-excerpt: "Computational modeling of distributed working memory maintenance in prefrontal-parietal circuits."
+title: "Project 1"
+excerpt: "A short description of what this project is about."
 collection: projects
 featured: true
 date: 2024-09-01
@@ -10,11 +10,11 @@ header:
 
 ## Overview
 
-Investigating the distributed mechanisms of working memory at the Neuromodulation Institute, Paris.
+Description of project 1.
 
 ## Methods
 
-Spiking neural network models, multi-area recurrent networks.
+Methods used.
 
 ## Results
 

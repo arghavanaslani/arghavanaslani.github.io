@@ -1,6 +1,6 @@
 ---
-title: "EEG Decoding of Cognitive States"
-excerpt: "Machine learning approaches to decoding cognitive load and attention from EEG signals."
+title: "Project 5"
+excerpt: "A short description of what this project is about."
 collection: projects
 featured: false
 date: 2022-09-01
@@ -10,4 +10,4 @@ header:
 
 ## Overview
 
-Applying classification methods to electrophysiological data.
+Description of project 5.

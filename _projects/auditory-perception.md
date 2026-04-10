@@ -1,6 +1,6 @@
 ---
-title: "Auditory Scene Analysis"
-excerpt: "Perceptual mechanisms underlying the segregation and grouping of complex acoustic scenes."
+title: "Project 3"
+excerpt: "A short description of what this project is about."
 collection: projects
 featured: true
 date: 2024-10-01
@@ -10,11 +10,11 @@ header:
 
 ## Overview
 
-Research at the Perceptual Systems Lab, ENS Paris, with Christian Lorenzi.
+Description of project 3.
 
 ## Methods
 
-Psychoacoustics, computational auditory models.
+Methods used.
 
 ## Results
 

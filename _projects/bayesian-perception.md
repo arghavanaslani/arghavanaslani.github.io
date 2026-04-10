@@ -1,6 +1,6 @@
 ---
-title: "Bayesian Models of Multisensory Integration"
-excerpt: "Probabilistic framework for understanding how the brain combines information across sensory modalities."
+title: "Project 4"
+excerpt: "A short description of what this project is about."
 collection: projects
 featured: false
 date: 2023-01-01
@@ -10,4 +10,4 @@ header:
 
 ## Overview
 
-Computational exploration of multisensory Bayesian inference.
+Description of project 4.
