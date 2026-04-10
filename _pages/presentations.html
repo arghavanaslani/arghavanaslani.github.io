@@ -1,0 +1,27 @@
+---
+layout: single
+title: "Presentations"
+permalink: /presentations/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="archive-intro">Talks and presentations I found interesting — with summaries and quotes.</p>
+
+{% assign sorted = site.presentations | sort: "date" | reverse %}
+{% for item in sorted %}
+<div class="resource-archive-item">
+  <h3 class="resource-archive-item__title"><a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a></h3>
+  <p class="resource-archive-item__meta">
+    {% if item.speaker %}{{ item.speaker }}{% endif %}
+    {% if item.venue %} · {{ item.venue }}{% endif %}
+    {% if item.year %} · {{ item.year }}{% endif %}
+  </p>
+  {% if item.excerpt %}<p class="resource-archive-item__excerpt">{{ item.excerpt }}</p>{% endif %}
+</div>
+{% endfor %}
+
+{% if site.presentations.size == 0 %}
+<p class="archive-empty">Nothing here yet.</p>
+{% endif %}

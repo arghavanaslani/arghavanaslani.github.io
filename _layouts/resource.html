@@ -1,0 +1,49 @@
+---
+layout: single
+---
+
+{% assign col = page.collection %}
+
+<div class="resource-header">
+  {% if page.authors %}
+    <span class="resource-header__field"><strong>Authors</strong> {{ page.authors }}</span>
+  {% endif %}
+  {% if page.author %}
+    <span class="resource-header__field"><strong>Author</strong> {{ page.author }}</span>
+  {% endif %}
+  {% if page.instructor %}
+    <span class="resource-header__field"><strong>Instructor</strong> {{ page.instructor }}</span>
+  {% endif %}
+  {% if page.speaker %}
+    <span class="resource-header__field"><strong>Speaker</strong> {{ page.speaker }}</span>
+  {% endif %}
+  {% if page.year %}
+    <span class="resource-header__field"><strong>Year</strong> {{ page.year }}</span>
+  {% endif %}
+  {% if page.journal %}
+    <span class="resource-header__field"><strong>Journal</strong> <em>{{ page.journal }}</em></span>
+  {% endif %}
+  {% if page.publisher %}
+    <span class="resource-header__field"><strong>Publisher</strong> {{ page.publisher }}</span>
+  {% endif %}
+  {% if page.platform %}
+    <span class="resource-header__field"><strong>Platform</strong> {{ page.platform }}</span>
+  {% endif %}
+  {% if page.venue %}
+    <span class="resource-header__field"><strong>Venue</strong> {{ page.venue }}</span>
+  {% endif %}
+  {% if page.source_url %}
+    <span class="resource-header__field">
+      <a href="{{ page.source_url }}" target="_blank" rel="noopener" class="resource-header__link">
+        {% if col == "papers" %}View paper →
+        {% elsif col == "courses" %}Go to course →
+        {% elsif col == "presentations" %}Watch →
+        {% elsif col == "books" %}Find book →
+        {% else %}Source →
+        {% endif %}
+      </a>
+    </span>
+  {% endif %}
+</div>
+
+{{ content }}

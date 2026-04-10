@@ -1,0 +1,247 @@
+/* ==========================================================================
+   RESOURCES — Library landing page
+   ========================================================================== */
+
+.library__intro {
+  color: var(--global-text-color-light);
+  font-size: $type-size-5;
+  margin-bottom: 1.75rem;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+
+  @include breakpoint(max-width $small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.library-section {
+  padding: 1.35rem 1.5rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  background: #fff;
+
+  &--wide {
+    grid-column: 1 / -1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.4rem;
+
+    i {
+      color: var(--global-link-color);
+      font-size: 0.95rem;
+      width: 1.1rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      flex: 1;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+
+  &__see-all {
+    font-size: $type-size-6;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__desc {
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+    margin: 0.3rem 0 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+.library-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &--row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1.5rem;
+
+    @include breakpoint(max-width $small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--global-border-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      display: block;
+      font-size: 0.83rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--global-text-color);
+      transition: color 0.15s ease-in-out;
+
+      &:hover {
+        color: var(--global-link-color);
+        text-decoration: none;
+      }
+    }
+
+    &--empty {
+      font-size: $type-size-6;
+      color: var(--global-text-color-light);
+      font-style: italic;
+    }
+  }
+
+  &__meta {
+    display: block;
+    font-size: 0.73rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.1rem;
+  }
+}
+
+
+/* ==========================================================================
+   RESOURCE ITEM — individual page metadata box
+   ========================================================================== */
+
+.resource-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--global-border-color);
+  border-left: 3px solid var(--global-link-color);
+  border-radius: $border-radius;
+  margin-bottom: 2rem;
+  font-size: $type-size-6;
+  line-height: 1.6;
+
+  &__field {
+    color: var(--global-text-color-light);
+
+    strong {
+      color: var(--global-text-color);
+      font-weight: 600;
+      margin-right: 0.3em;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   RESOURCE ARCHIVE — listing pages (/papers/, /books/, etc.)
+   ========================================================================== */
+
+.archive-intro {
+  color: var(--global-text-color-light);
+  margin-bottom: 2rem;
+}
+
+.archive-empty {
+  color: var(--global-text-color-light);
+  font-style: italic;
+}
+
+.resource-archive-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__title {
+    margin: 0 0 0.2rem;
+    font-size: $type-size-5;
+
+    a {
+      text-decoration: none;
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-link-color);
+      }
+    }
+  }
+
+  &__meta {
+    margin: 0 0 0.4rem;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+  }
+
+  &__excerpt {
+    margin: 0;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+  }
+}
+
+
+/* ==========================================================================
+   QUESTIONS — styling for Q&A blocks inside paper/resource pages
+   ========================================================================== */
+
+.page__content {
+  .questions-section {
+    h3 {
+      font-size: $type-size-5;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.3rem;
+      color: var(--global-text-color);
+    }
+
+    .answer {
+      padding: 0.7rem 1rem;
+      border-left: 3px solid var(--global-link-color);
+      background: var(--global-code-background-color);
+      border-radius: 0 $border-radius $border-radius 0;
+      font-size: $type-size-6;
+      margin-top: 0.4rem;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .answer--open {
+      border-left-color: var(--global-border-color);
+      color: var(--global-text-color-light);
+      font-style: italic;
+    }
+  }
+}

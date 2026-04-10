@@ -1,0 +1,27 @@
+---
+layout: single
+title: "Papers"
+permalink: /papers/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="archive-intro">Research papers I've read, with personal summaries, open questions, and answers as I find them.</p>
+
+{% assign sorted = site.papers | sort: "date" | reverse %}
+{% for item in sorted %}
+<div class="resource-archive-item">
+  <h3 class="resource-archive-item__title"><a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a></h3>
+  <p class="resource-archive-item__meta">
+    {% if item.authors %}{{ item.authors }}{% endif %}
+    {% if item.year %} · {{ item.year }}{% endif %}
+    {% if item.journal %} · <em>{{ item.journal }}</em>{% endif %}
+  </p>
+  {% if item.excerpt %}<p class="resource-archive-item__excerpt">{{ item.excerpt }}</p>{% endif %}
+</div>
+{% endfor %}
+
+{% if site.papers.size == 0 %}
+<p class="archive-empty">Nothing here yet.</p>
+{% endif %}

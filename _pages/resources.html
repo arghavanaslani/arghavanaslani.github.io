@@ -1,0 +1,126 @@
+---
+layout: single
+title: "Resources"
+permalink: /resources/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="library__intro">A personal library — papers I've read with notes and questions, courses, talks, books, and method explainers.</p>
+
+<div class="library-grid">
+
+  <!-- Papers -->
+  <div class="library-section">
+    <div class="library-section__header">
+      <i class="fas fa-file-alt" aria-hidden="true"></i>
+      <h2>Papers</h2>
+      <a href="{{ base_path }}/papers/" class="library-section__see-all">Browse all →</a>
+    </div>
+    <p class="library-section__desc">Research papers I've read, with my own summary, open questions, and answers as I find them.</p>
+    <ul class="library-list">
+      {% assign sorted_papers = site.papers | sort: "date" | reverse %}
+      {% for item in sorted_papers limit: 3 %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+        <span class="library-list__meta">
+          {% if item.authors %}{{ item.authors }}{% endif %}
+          {% if item.year %} · {{ item.year }}{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+      {% if site.papers.size == 0 %}<li class="library-list__item library-list__item--empty">Nothing yet.</li>{% endif %}
+    </ul>
+  </div>
+
+  <!-- Courses -->
+  <div class="library-section">
+    <div class="library-section__header">
+      <i class="fas fa-play-circle" aria-hidden="true"></i>
+      <h2>Courses</h2>
+      <a href="{{ base_path }}/courses/" class="library-section__see-all">Browse all →</a>
+    </div>
+    <p class="library-section__desc">Online courses and lecture series I've found worthwhile, especially on YouTube.</p>
+    <ul class="library-list">
+      {% assign sorted_courses = site.courses | sort: "date" | reverse %}
+      {% for item in sorted_courses limit: 3 %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+        <span class="library-list__meta">
+          {% if item.instructor %}{{ item.instructor }}{% endif %}
+          {% if item.platform %} · {{ item.platform }}{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+      {% if site.courses.size == 0 %}<li class="library-list__item library-list__item--empty">Nothing yet.</li>{% endif %}
+    </ul>
+  </div>
+
+  <!-- Presentations -->
+  <div class="library-section">
+    <div class="library-section__header">
+      <i class="fas fa-desktop" aria-hidden="true"></i>
+      <h2>Presentations</h2>
+      <a href="{{ base_path }}/presentations/" class="library-section__see-all">Browse all →</a>
+    </div>
+    <p class="library-section__desc">Talks and presentations I found interesting — with summaries and quotes.</p>
+    <ul class="library-list">
+      {% assign sorted_pres = site.presentations | sort: "date" | reverse %}
+      {% for item in sorted_pres limit: 3 %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+        <span class="library-list__meta">
+          {% if item.speaker %}{{ item.speaker }}{% endif %}
+          {% if item.year %} · {{ item.year }}{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+      {% if site.presentations.size == 0 %}<li class="library-list__item library-list__item--empty">Nothing yet.</li>{% endif %}
+    </ul>
+  </div>
+
+  <!-- Books -->
+  <div class="library-section">
+    <div class="library-section__header">
+      <i class="fas fa-book" aria-hidden="true"></i>
+      <h2>Books</h2>
+      <a href="{{ base_path }}/books/" class="library-section__see-all">Browse all →</a>
+    </div>
+    <p class="library-section__desc">Books I've read — notes, summaries, and passages that stayed with me.</p>
+    <ul class="library-list">
+      {% assign sorted_books = site.books | sort: "date" | reverse %}
+      {% for item in sorted_books limit: 3 %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+        <span class="library-list__meta">
+          {% if item.author %}{{ item.author }}{% endif %}
+          {% if item.year %} · {{ item.year }}{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+      {% if site.books.size == 0 %}<li class="library-list__item library-list__item--empty">Nothing yet.</li>{% endif %}
+    </ul>
+  </div>
+
+  <!-- Methods — full width -->
+  <div class="library-section library-section--wide">
+    <div class="library-section__header">
+      <i class="fas fa-flask" aria-hidden="true"></i>
+      <h2>Methods</h2>
+      <a href="{{ base_path }}/methods/" class="library-section__see-all">Browse all →</a>
+    </div>
+    <p class="library-section__desc">Short explainers on analytical and computational methods — what they are, how they work, and where to learn more.</p>
+    <ul class="library-list library-list--row">
+      {% assign sorted_methods = site.methods | sort: "date" | reverse %}
+      {% for item in sorted_methods limit: 4 %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+        {% if item.excerpt %}<span class="library-list__meta">{{ item.excerpt | truncate: 80 }}</span>{% endif %}
+      </li>
+      {% endfor %}
+      {% if site.methods.size == 0 %}<li class="library-list__item library-list__item--empty">Nothing yet.</li>{% endif %}
+    </ul>
+  </div>
+
+</div>

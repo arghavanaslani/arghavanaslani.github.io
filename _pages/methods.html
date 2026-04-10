@@ -1,0 +1,22 @@
+---
+layout: single
+title: "Methods"
+permalink: /methods/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="archive-intro">Short explainers on analytical and computational methods — what they are, how they work, and where to learn more.</p>
+
+{% assign sorted = site.methods | sort: "date" | reverse %}
+{% for item in sorted %}
+<div class="resource-archive-item">
+  <h3 class="resource-archive-item__title"><a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a></h3>
+  {% if item.excerpt %}<p class="resource-archive-item__excerpt">{{ item.excerpt }}</p>{% endif %}
+</div>
+{% endfor %}
+
+{% if site.methods.size == 0 %}
+<p class="archive-empty">Nothing here yet.</p>
+{% endif %}

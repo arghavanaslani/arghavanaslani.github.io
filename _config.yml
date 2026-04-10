@@ -206,6 +206,21 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  papers:
+    output: true
+    permalink: /:collection/:path/
+  courses:
+    output: true
+    permalink: /:collection/:path/
+  presentations:
+    output: true
+    permalink: /:collection/:path/
+  books:
+    output: true
+    permalink: /:collection/:path/
+  methods:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -236,6 +251,37 @@ defaults:
       layout: single
       author_profile: true
       share: false
+  # _papers / _courses / _presentations / _books / _methods
+  - scope:
+      path: ""
+      type: papers
+    values:
+      layout: resource
+      author_profile: false
+  - scope:
+      path: ""
+      type: courses
+    values:
+      layout: resource
+      author_profile: false
+  - scope:
+      path: ""
+      type: presentations
+    values:
+      layout: resource
+      author_profile: false
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: resource
+      author_profile: false
+  - scope:
+      path: ""
+      type: methods
+    values:
+      layout: resource
+      author_profile: false
 
 
 # Sass/SCSS

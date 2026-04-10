@@ -1,0 +1,27 @@
+---
+layout: single
+title: "Courses"
+permalink: /courses/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="archive-intro">Online courses and lecture series I've found worthwhile, especially on YouTube.</p>
+
+{% assign sorted = site.courses | sort: "date" | reverse %}
+{% for item in sorted %}
+<div class="resource-archive-item">
+  <h3 class="resource-archive-item__title"><a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a></h3>
+  <p class="resource-archive-item__meta">
+    {% if item.instructor %}{{ item.instructor }}{% endif %}
+    {% if item.platform %} · {{ item.platform }}{% endif %}
+    {% if item.year %} · {{ item.year }}{% endif %}
+  </p>
+  {% if item.excerpt %}<p class="resource-archive-item__excerpt">{{ item.excerpt }}</p>{% endif %}
+</div>
+{% endfor %}
+
+{% if site.courses.size == 0 %}
+<p class="archive-empty">Nothing here yet.</p>
+{% endif %}
