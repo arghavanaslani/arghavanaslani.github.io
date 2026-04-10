@@ -21,19 +21,38 @@ author_profile: true
 <section class="research__projects">
   <h2>Projects</h2>
 
-  {% if site.projects.size > 0 %}
+  {% assign featured = site.projects | where: "featured", true | sort: "date" | reverse %}
+  {% assign other    = site.projects | where_exp: "p", "p.featured != true" | sort: "date" | reverse %}
+
+  {% if featured.size > 0 %}
   <div class="project-grid">
-    {% for project in site.projects %}
-    <a href="{{ base_path }}{{ project.url }}" class="project-card" {% if project.header.teaser %}style="background-image: url('{{ base_path }}{{ project.header.teaser }}')"{% endif %}>
-      <div class="project-card__overlay">
-        <h3 class="project-card__title">{{ project.title }}</h3>
-        {% if project.excerpt %}<p class="project-card__excerpt">{{ project.excerpt | truncate: 90 }}</p>{% endif %}
-      </div>
+    {% for project in featured %}
+      {% assign bg = "" %}
+      {% if project.header.teaser %}
+        {% assign bg = "background-image:url('" | append: base_path | append: project.header.teaser | append: "')" %}
+      {% elsif project.header.color %}
+        {% assign bg = "background-color:" | append: project.header.color %}
+      {% endif %}
+      <a href="{{ base_path }}{{ project.url }}" class="project-card" {% if bg != "" %}style="{{ bg }}"{% endif %}>
+        <div class="project-card__overlay">
+          <h3 class="project-card__title">{{ project.title }}</h3>
+          {% if project.excerpt %}<p class="project-card__excerpt">{{ project.excerpt | truncate: 90 }}</p>{% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if other.size > 0 %}
+  <div class="project-list">
+    <h3 class="project-list__heading">More</h3>
+    {% for project in other %}
+    <a href="{{ base_path }}{{ project.url }}" class="project-list-item">
+      <span class="project-list-item__title">{{ project.title }}</span>
+      <span class="project-list-item__excerpt">{{ project.excerpt | truncate: 120 }}</span>
     </a>
     {% endfor %}
   </div>
-  {% else %}
-  <p class="research__empty">Projects coming soon.</p>
   {% endif %}
 
 </section>
