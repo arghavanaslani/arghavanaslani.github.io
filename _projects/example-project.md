@@ -1,8 +1,10 @@
 ---
 title: "Example Project"
-excerpt: "A short description of this project."
+excerpt: "A short description of this project and its main findings."
 collection: projects
 date: 2024-01-01
+header:
+  teaser: /images/your-project-figure.png
 ---
 
 ## Overview
@@ -15,7 +17,7 @@ Explain the approach, tools, or techniques used.
 
 ## Results
 
-Share key findings, graphs, or visualizations here. You can embed images like:
+Share key findings, graphs, or visualizations here.
 
 ![Figure 1](/images/your-figure.png)
 
