@@ -9,136 +9,143 @@ author_profile: true
 
 <p class="library__intro">A personal library — papers I've read with notes and questions, courses, talks, books, and method explainers.</p>
 
-<nav class="library-nav">
-  <a href="#papers"><i class="fas fa-file-alt" aria-hidden="true"></i> Papers</a>
-  <a href="#courses"><i class="fas fa-play-circle" aria-hidden="true"></i> Courses</a>
-  <a href="#presentations"><i class="fas fa-desktop" aria-hidden="true"></i> Presentations</a>
-  <a href="#books"><i class="fas fa-book" aria-hidden="true"></i> Books</a>
-  <a href="#methods"><i class="fas fa-flask" aria-hidden="true"></i> Methods</a>
-</nav>
-
 <!-- ── Papers ── -->
-<section class="library-section" id="papers">
-  <div class="library-section__header">
+{% assign sorted_papers = site.papers | sort: "date" | reverse %}
+<details class="library-accordion" open>
+  <summary class="library-accordion__summary">
     <i class="fas fa-file-alt" aria-hidden="true"></i>
-    <h2>Papers</h2>
+    <span>Papers</span>
+    <span class="library-accordion__count">{{ sorted_papers.size }}</span>
+  </summary>
+  <div class="library-accordion__body">
+    <p class="library-section__desc">Research papers I've read, with my own summary, open questions, and answers as I find them.</p>
+    {% if sorted_papers.size > 0 %}
+    <ul class="library-list">
+      {% for item in sorted_papers %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>{% if item.status %} <span class="resource-status resource-status--{{ item.status }}">{{ item.status }}</span>{% endif %}
+        <span class="library-list__meta">
+          {% if item.authors %}{{ item.authors }}{% endif %}
+          {% if item.year %} · {{ item.year }}{% endif %}
+          {% if item.journal %} · <em>{{ item.journal }}</em>{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="library-empty">Nothing yet.</p>
+    {% endif %}
   </div>
-  <p class="library-section__desc">Research papers I've read, with my own summary, open questions, and answers as I find them.</p>
-  {% assign sorted_papers = site.papers | sort: "date" | reverse %}
-  {% if sorted_papers.size > 0 %}
-  <ul class="library-list">
-    {% for item in sorted_papers %}
-    <li class="library-list__item">
-      <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>{% if item.status %} <span class="resource-status resource-status--{{ item.status }}">{{ item.status }}</span>{% endif %}
-      <span class="library-list__meta">
-        {% if item.authors %}{{ item.authors }}{% endif %}
-        {% if item.year %} · {{ item.year }}{% endif %}
-        {% if item.journal %} · <em>{{ item.journal }}</em>{% endif %}
-      </span>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="library-empty">Nothing yet.</p>
-  {% endif %}
-</section>
+</details>
 
 <!-- ── Courses ── -->
-<section class="library-section" id="courses">
-  <div class="library-section__header">
+{% assign sorted_courses = site.courses | sort: "date" | reverse %}
+<details class="library-accordion">
+  <summary class="library-accordion__summary">
     <i class="fas fa-play-circle" aria-hidden="true"></i>
-    <h2>Courses</h2>
+    <span>Courses</span>
+    <span class="library-accordion__count">{{ sorted_courses.size }}</span>
+  </summary>
+  <div class="library-accordion__body">
+    <p class="library-section__desc">Online courses and lecture series I've found worthwhile, especially on YouTube.</p>
+    {% if sorted_courses.size > 0 %}
+    <ul class="library-list">
+      {% for item in sorted_courses %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>{% if item.status %} <span class="resource-status resource-status--{{ item.status }}">{{ item.status }}</span>{% endif %}
+        <span class="library-list__meta">
+          {% if item.instructor %}{{ item.instructor }}{% endif %}
+          {% if item.platform %} · {{ item.platform }}{% endif %}
+          {% if item.year %} · {{ item.year }}{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="library-empty">Nothing yet.</p>
+    {% endif %}
   </div>
-  <p class="library-section__desc">Online courses and lecture series I've found worthwhile, especially on YouTube.</p>
-  {% assign sorted_courses = site.courses | sort: "date" | reverse %}
-  {% if sorted_courses.size > 0 %}
-  <ul class="library-list">
-    {% for item in sorted_courses %}
-    <li class="library-list__item">
-      <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
-      <span class="library-list__meta">
-        {% if item.instructor %}{{ item.instructor }}{% endif %}
-        {% if item.platform %} · {{ item.platform }}{% endif %}
-        {% if item.year %} · {{ item.year }}{% endif %}
-      </span>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="library-empty">Nothing yet.</p>
-  {% endif %}
-</section>
+</details>
 
 <!-- ── Presentations ── -->
-<section class="library-section" id="presentations">
-  <div class="library-section__header">
+{% assign sorted_pres = site.presentations | sort: "date" | reverse %}
+<details class="library-accordion">
+  <summary class="library-accordion__summary">
     <i class="fas fa-desktop" aria-hidden="true"></i>
-    <h2>Presentations</h2>
+    <span>Presentations</span>
+    <span class="library-accordion__count">{{ sorted_pres.size }}</span>
+  </summary>
+  <div class="library-accordion__body">
+    <p class="library-section__desc">Talks and presentations I found interesting — with summaries and quotes.</p>
+    {% if sorted_pres.size > 0 %}
+    <ul class="library-list">
+      {% for item in sorted_pres %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>{% if item.status %} <span class="resource-status resource-status--{{ item.status }}">{{ item.status }}</span>{% endif %}
+        <span class="library-list__meta">
+          {% if item.speaker %}{{ item.speaker }}{% endif %}
+          {% if item.venue %} · {{ item.venue }}{% endif %}
+          {% if item.year %} · {{ item.year }}{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="library-empty">Nothing yet.</p>
+    {% endif %}
   </div>
-  <p class="library-section__desc">Talks and presentations I found interesting — with summaries and quotes.</p>
-  {% assign sorted_pres = site.presentations | sort: "date" | reverse %}
-  {% if sorted_pres.size > 0 %}
-  <ul class="library-list">
-    {% for item in sorted_pres %}
-    <li class="library-list__item">
-      <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
-      <span class="library-list__meta">
-        {% if item.speaker %}{{ item.speaker }}{% endif %}
-        {% if item.venue %} · {{ item.venue }}{% endif %}
-        {% if item.year %} · {{ item.year }}{% endif %}
-      </span>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="library-empty">Nothing yet.</p>
-  {% endif %}
-</section>
+</details>
 
 <!-- ── Books ── -->
-<section class="library-section" id="books">
-  <div class="library-section__header">
+{% assign sorted_books = site.books | sort: "date" | reverse %}
+<details class="library-accordion">
+  <summary class="library-accordion__summary">
     <i class="fas fa-book" aria-hidden="true"></i>
-    <h2>Books</h2>
+    <span>Books</span>
+    <span class="library-accordion__count">{{ sorted_books.size }}</span>
+  </summary>
+  <div class="library-accordion__body">
+    <p class="library-section__desc">Books I've read — notes, summaries, and passages that stayed with me.</p>
+    {% if sorted_books.size > 0 %}
+    <ul class="library-list">
+      {% for item in sorted_books %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>{% if item.status %} <span class="resource-status resource-status--{{ item.status }}">{{ item.status }}</span>{% endif %}
+        <span class="library-list__meta">
+          {% if item.author %}{{ item.author }}{% endif %}
+          {% if item.year %} · {{ item.year }}{% endif %}
+          {% if item.publisher %} · {{ item.publisher }}{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="library-empty">Nothing yet.</p>
+    {% endif %}
   </div>
-  <p class="library-section__desc">Books I've read — notes, summaries, and passages that stayed with me.</p>
-  {% assign sorted_books = site.books | sort: "date" | reverse %}
-  {% if sorted_books.size > 0 %}
-  <ul class="library-list">
-    {% for item in sorted_books %}
-    <li class="library-list__item">
-      <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
-      <span class="library-list__meta">
-        {% if item.author %}{{ item.author }}{% endif %}
-        {% if item.year %} · {{ item.year }}{% endif %}
-        {% if item.publisher %} · {{ item.publisher }}{% endif %}
-      </span>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="library-empty">Nothing yet.</p>
-  {% endif %}
-</section>
+</details>
 
 <!-- ── Methods ── -->
-<section class="library-section" id="methods">
-  <div class="library-section__header">
+{% assign sorted_methods = site.methods | sort: "date" | reverse %}
+<details class="library-accordion">
+  <summary class="library-accordion__summary">
     <i class="fas fa-flask" aria-hidden="true"></i>
-    <h2>Methods</h2>
+    <span>Methods</span>
+    <span class="library-accordion__count">{{ sorted_methods.size }}</span>
+  </summary>
+  <div class="library-accordion__body">
+    <p class="library-section__desc">Short explainers on analytical and computational methods — what they are, how they work, and where to learn more.</p>
+    {% if sorted_methods.size > 0 %}
+    <ul class="library-list">
+      {% for item in sorted_methods %}
+      <li class="library-list__item">
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+        {% if item.excerpt %}<span class="library-list__meta">{{ item.excerpt }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="library-empty">Nothing yet.</p>
+    {% endif %}
   </div>
-  <p class="library-section__desc">Short explainers on analytical and computational methods — what they are, how they work, and where to learn more.</p>
-  {% assign sorted_methods = site.methods | sort: "date" | reverse %}
-  {% if sorted_methods.size > 0 %}
-  <ul class="library-list">
-    {% for item in sorted_methods %}
-    <li class="library-list__item">
-      <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
-      {% if item.excerpt %}<span class="library-list__meta">{{ item.excerpt }}</span>{% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="library-empty">Nothing yet.</p>
-  {% endif %}
-</section>
+</details>

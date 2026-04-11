@@ -43,6 +43,67 @@
   }
 }
 
+/* Accordion sections */
+.library-accordion {
+  border-bottom: 1px solid var(--global-border-color);
+  margin-bottom: 0;
+
+  &:first-of-type {
+    border-top: 1px solid var(--global-border-color);
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 0;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    &::-webkit-details-marker { display: none; }
+
+    i {
+      color: var(--global-link-color);
+      font-size: 0.9rem;
+      width: 1rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    span:nth-child(2) {
+      flex: 1;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    &::after {
+      content: "›";
+      font-size: 1.1rem;
+      color: var(--global-text-color-light);
+      transition: transform 0.2s ease;
+      line-height: 1;
+    }
+  }
+
+  &[open] > &__summary::after {
+    transform: rotate(90deg);
+  }
+
+  &__body {
+    padding-bottom: 1.25rem;
+  }
+
+  &__count {
+    font-size: 0.72rem;
+    color: var(--global-text-color-light);
+    background: var(--global-border-color);
+    padding: 0.1em 0.55em;
+    border-radius: 2em;
+    font-weight: 500;
+  }
+}
+
 /* Each section */
 .library-section {
   margin-bottom: 2.5rem;
